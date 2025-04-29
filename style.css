@@ -1,8 +1,9 @@
 /* Basic Reset */
-body, h1, p, ul, li {
+body, h1, p, ul, li, form, fieldset, legend, label, input, select, textarea, button, details, summary {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    vertical-align: baseline;
 }
 
 body {
@@ -19,7 +20,7 @@ body {
 
 /* =================================== */
 /* === HEADER, LOGO, NAV STYLING === */
-/* (Keep all your existing header styles - unchanged) */
+/* (Assume these are consistent with other pages) */
 /* =================================== */
 .site-header {
     position: sticky; top: 0; z-index: 100; background-color: rgba(240, 240, 240, 0.92); border-bottom: 2px solid #cccccc; display: flex; align-items: center; padding: 0 1rem; min-height: 120px;
@@ -29,106 +30,302 @@ body {
 .main-nav li { margin: 0 0.8rem; }
 .main-nav a { color: #333333; text-decoration: none; font-weight: 600; padding: 0.5rem 0.8rem; transition: background-color 0.3s ease, color 0.3s ease; border-radius: 4px; display: inline-block; white-space: nowrap; }
 .main-nav a:hover, .main-nav a:focus { background-color: #dddddd; color: #000000; outline: none; }
-.main-nav a.active { background-color: #55aaff; color: #ffffff; font-weight: bold;} /* Ensure this style is present */
+.main-nav a.active { background-color: #55aaff; color: #ffffff; font-weight: bold;}
 .header-icons { display: flex; align-items: center; gap: 15px; margin-left: auto; }
 #site-logo { width: 100px; height: auto; display: block; order: 2; }
 .social-icon-link { line-height: 0; order: 1; display: block; }
 .social-icon { width: 32px; height: 32px; display: block; transition: opacity 0.2s ease; }
 .social-icon:hover { opacity: 0.8; }
 
-/* ======================================= */
-/* === MAIN CONTENT === */
-/* ======================================= */
+/* ================================= */
+/* === FAQ MAIN CONTENT SPECIFIC === */
+/* ================================= */
 #main-content {
-    max-width: 960px; /* Limits width */
-    margin: 2rem auto; /* Centers horizontally */
-    padding: 25px; /* Added/adjusted padding */
-    font-size: 1.2em;
-    font-weight: 600;
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.4); /* Background for legibility */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.3em; /* Base font size for FAQ section */
+    font-weight: 500;
     color: #000000;
-    text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.6); /* Text shadow for readability */
-
-    /* --- CHANGE: Add semi-transparent background --- */
-    background-color: rgba(255, 255, 255, 0.3); /* 30% opaque white - adjust as needed */
-    border-radius: 5px; /* Optional: adds slightly rounded corners */
+    text-shadow: none;
 }
 
 #main-content h1 {
     color: #000000;
-    margin-bottom: 1.5rem;
-    font-size: 3.2em;
+    margin-bottom: 2rem;
+    font-size: 3.0em; /* Adjusted H1 size */
     font-weight: 700;
     text-align: center;
-    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+    text-shadow: none;
 }
 
-#main-content p {
-    line-height: 1.7;
-    margin-bottom: 1.3em;
-    /* --- CHANGE: Justify text --- */
-    text-align: justify;
+/* --- FAQ Item Styling --- */
+#main-content .faq-item {
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.6);
+    padding-bottom: 1.25rem;
 }
+#main-content .faq-item:last-of-type { /* Target only the last *faq-item* */
+     border-bottom: none;
+     margin-bottom: 0; /* Remove margin if needed */
+     padding-bottom: 0; /* Remove padding if needed */
+ }
 
-#main-content a {
-    color: #004a9e;
-    text-decoration: underline;
-    text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.6);
+
+/* Question / Summary Styling */
+#main-content .faq-question {
+    display: list-item;
+    list-style: disclosure-closed outside;
+    font-size: 1.15em;
     font-weight: 700;
+    text-decoration: underline;
+    color: #000;
+    cursor: pointer;
+    margin-bottom: 0.75rem;
+    padding-left: 0.5rem; /* Reduced padding, let marker position naturally */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-shadow: none;
+    position: relative;
 }
-#main-content a:hover {
+/* Change marker when open */
+#main-content details[open] > .faq-question {
+   list-style-type: disclosure-open;
+}
+/* Remove focus outline from summary if desired */
+#main-content .faq-question:focus {
+   /* outline: none; */
+}
+/* Styling the marker itself */
+#main-content .faq-question::marker {
+   /* Marker styles here */
+    padding-right: 0.5em; /* Space between marker and text */
+}
+
+/* Answer Styling */
+#main-content .faq-answer {
+    /* Match text indent of question summary text */
+    padding-left: 1.75rem; /* Aligns with text past the marker */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+#main-content .faq-answer p {
+    font-weight: 500;
+    text-align: justify;
+    color: #000000;
+    line-height: 1.7;
+    margin-bottom: 1em;
+    text-shadow: none;
+}
+#main-content .faq-answer p:last-child { margin-bottom: 0; }
+
+
+/* ======================================== */
+/* === FAQ CONTACT FORM STYLES === */
+/* ======================================== */
+
+.faq-contact-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ddd;
+}
+
+.faq-contact-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.8em;
+    color: #333;
+     text-shadow: none; /* Ensure clean text */
+}
+.faq-contact-section p {
+    text-align: center;
+    margin-bottom: 2em;
+    font-size: 1rem; /* Reset paragraph size */
+    color: #555;
+    font-weight: normal;
+    text-shadow: none;
+}
+/* Link inside intro paragraph */
+.faq-contact-section p a {
+     color: #004a9e;
+     text-decoration: underline;
+     font-weight: bold;
+     text-shadow: none; /* Keep links clean */
+}
+.faq-contact-section p a:hover {
     color: #00336d;
 }
 
-/* ======================================= */
+.contact-form.faq-form {
+    font-size: 1rem; /* Form base font size = 16px */
+    color: #333;
+    text-shadow: none;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Labels for inputs */
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+     /* Removed text-shadow for cleaner look against form background */
+    text-shadow: none;
+}
+
+/* --- UPDATED: Styling for input, select, textarea --- */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form select, /* ADDED select */
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 1em; /* Inherit from .contact-form */
+    font-family: inherit;
+    /* OPAQUE BACKGROUND */
+    background-color: rgba(255, 255, 255, 0.8); /* Same as inputs */
+    color: #333;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+/* Focus styles - Also include select */
+.contact-form input:focus,
+.contact-form select:focus, /* ADDED select:focus */
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #55aaff;
+    box-shadow: 0 0 5px rgba(85, 170, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.required {
+    color: #d9534f;
+    margin-left: 3px;
+    font-weight: bold;
+}
+
+/* --- Styles for the two-part phone input - Unchanged Needed for Alignment --- */
+/* This section ensures the two boxes align correctly */
+.phone-inputs-wrapper {
+    display: flex;
+    gap: 0.5rem;
+    align-items: stretch; /* Critical for same height */
+    /* This wrapper will naturally fill the space like other .form-group children */
+}
+
+.contact-form select#faq-phone-prefix {
+    flex: 0 0 100px; /* Adjust width of prefix box */
+    /* Inherits background, border, etc. from the general select rule above */
+}
+
+.contact-form input#faq-phone-number {
+    flex: 1; /* Takes remaining space */
+    /* Inherits background, border, etc. from the general input rule above */
+}
+
+
+/* === Submit Button Styling === */
+.form-submit-button {
+    text-align: center;
+    margin-top: 2rem;
+}
+.form-submit-button button {
+    padding: 0.8rem 2.5rem;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0056b3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.form-submit-button button:hover,
+.form-submit-button button:focus {
+    background-color: #004494;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+/* === End FAQ Contact Form Styles === */
+
+/* ================================= */
 /* === FOOTER === */
-/* (Keep existing footer styles - unchanged) */
-/* ======================================= */
+/* ================================= */
 .site-footer {
     text-align: center; margin-top: 2rem; padding: 1rem; font-size: 0.9em; color: #fff; background-color: rgba(51, 51, 51, 0.8); border-top: 1px solid #ccc;
 }
 
 /* ======================================= */
 /* === RESPONSIVE ADJUSTMENTS === */
-/* (Keep existing responsive styles - unchanged) */
+/* (Use the block provided by user) */
 /* ======================================= */
 @media (max-width: 600px) {
     .site-header {
-        min-height: 90px;
-        padding: 0 0.5rem;
-        flex-wrap: wrap; /* Allow wrapping */
-        justify-content: center; /* Center when wrapped */
+        min-height: 90px; padding: 0 0.5rem; flex-wrap: wrap; justify-content: center;
     }
-
     .main-nav {
-        width: 100%;
-        order: 2;
-        margin: 0.5rem 0 0 0;
-        text-align: center;
+        width: 100%; order: 2; margin: 0.5rem 0 0 0; text-align: center;
     }
      .main-nav ul { justify-content: center; }
      .main-nav li { margin: 0.3rem 0.4rem; }
      .main-nav a { white-space: normal; text-align: center; }
 
     .header-icons {
-         gap: 10px;
-         margin-left: 0;
-         order: 1;
-         width: 100%;
-         justify-content: center;
+         gap: 10px; margin-left: 0; order: 1; width: 100%; justify-content: center;
     }
-
     #site-logo { width: 60px; order: 2; }
     .social-icon-link { order: 1; }
     .social-icon { width: 28px; height: 28px; }
 
     /* Content styling */
-    #main-content {
-         font-size: 1.1em;
-         padding: 15px; /* Reduce padding on smaller screens */
-    }
-    #main-content h1 { font-size: 2.5em; }
+    #main-content { font-size: 1.1em; padding: 15px;} /* Font size here applies to FAQ text now */
+    #main-content h1 { font-size: 2.5em; } /* Relative to the above 1.1em */
 
-    #main-content p {
-        text-align: left; /* Switch back from justify on small screens if desired */
-    }
+    /* Specific styles from user block for non-form content paragraphs */
+    #main-content > p { /* Assuming this targeted the non-existent general paragraphs */
+         /* Remove or adjust this if needed */
+         /* text-align: left;  Only needed if overriding justify */
+     }
+
+     /* Responsive for FAQ items */
+     #main-content .faq-question { font-size: 1.1em; }
+     #main-content .faq-answer { padding-left: 1.25rem; }
+     #main-content .faq-answer p { text-align: left; font-size: 1em; } /* Un-justify answer on mobile */
+
+     /* Responsive for the Form section */
+     .faq-contact-section h2 { font-size: 1.5em; }
+     .faq-contact-section p { font-size: 0.9em; }
+
+      .contact-form.faq-form {
+          font-size: 0.9rem; /* Make form elements slightly smaller */
+       }
+
+     /* Stack phone inputs */
+     .phone-inputs-wrapper {
+        flex-direction: column; /* Stack vertically */
+        gap: 0.75rem; /* Add gap when stacked */
+     }
+     .contact-form select#faq-phone-prefix {
+         flex: 1; /* Allow to take full width */
+         /* Reset fixed width if any applied directly */
+     }
+
 }

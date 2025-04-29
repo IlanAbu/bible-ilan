@@ -3,68 +3,441 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bible-Ilan - Main Page</title>
-    <!-- Link to CSS file within this MainPage folder -->
+    <title>Bible-Ilan - FAQ</title> <!-- Updated Title -->
+    <!-- Link to CSS within the *current* faq folder -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-</head>
-<body>
+
     <header class="site-header">
- 
-<!-- Navigation SECOND -->
-<nav class="main-nav">
-    <!-- ... your ul and li elements ... -->
-</nav>
+        <!-- Make sure Navigation paths are correct FROM the FAQ folder -->
         <nav class="main-nav">
             <ul>
-                <!-- Link to self (index.html within this MainPage folder) -->
                 <li><a href="../MainPage/index.html">Main Page</a></li>
-                <!-- Links go UP one level (../) then INTO the target folder -->
-                <li><a href="../faq/index.html">FAQ</a></li>
+                <li><a href="./index.html">FAQ</a></li> <!-- Link to self -->
                 <li><a href="../courses/index.html">Courses</a></li>
                 <li><a href="../about/index.html">About Me</a></li>
                 <li><a href="../bookshelf/index.html">Book Shelf</a></li>
                 <li><a href="../contact/index.html">Contact</a></li>
             </ul>
         </nav>
+
+        <!-- Optional: Icon Container if needed on this page too -->
+        <!-- Make sure paths use ../images/ if present -->
         <div class="header-icons">
-            <!-- Clickable Facebook Icon (add this part) -->
-            <a href="https://www.facebook.com/profile.php?id=61570257167649" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Visit our Facebook Profile">
+             <a href="https://www.facebook.com/profile.php?id=61570257167649" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Visit our Facebook Profile">
                  <img src="../images/Facebook.png" alt="Facebook logo" class="social-icon">
             </a>
-            <!-- Existing Site Logo -->
             <img id="site-logo" src="../images/logo.png" alt="Bible Ilan Logo">
         </div>
+
     </header>
 
     <main id="main-content">
-        <h1>Welcome to my Hebrew Bible studies website!</h1>
-        <p>Throughout my decades long journey as a Biblical Hebrew teacher and scholar, I have created dozens of text based courses, which I now invite you to join.</p>
+        <h1>Frequently Asked Questions</h1>
 
-        <p>If you are curious about the Hebrew bible, wish to gain some insight through reading it in its original language and already have some background studying Hebrew, you are in the right place! The courses consist of 7 classes, 45 min. each, where we read (in Hebrew) and hold in-depth discussions on a segment of 3-4 verses, in addition to other comparisons, with a special focus on biblical Hebrew language. We explore the texts from a primarily academic approach, comparing them to each other and other ancient near eastern sources. We also discuss possible meanings of rare or difficult words in different contexts, explore rabbis' takes on them and much more.</p>
+        <!-- FAQ Item 1 -->
+        <details class="faq-item">
+            <summary class="faq-question">What level of Hebrew is necessary for participating in the courses?</summary>
+            <div class="faq-answer">
+                <p>The courses were made for heterogenic groups of Hebrew (modern and biblical) learners. Participants should be able to read in Hebrew and have some vocabulary. Familiarity with at least a few dozens of Hebrew words and some grammatical concepts (the definite article, object marker, etc.) is also necessary. If you never studied Hebrew before, these courses might not be the best starting point for your journey. On the other hand, even if you are in a very advanced level, you will find great value in applying your knowledge to the literary and linguistic analyses of the biblical text.</p>
+            </div>
+        </details>
+
+         <!-- FAQ Item 12 -->
+         <details class="faq-item">
+            <summary class="faq-question">My Hebrew isn't good enough. Do you also offer more basic level hebrew classes?</summary>
+            <div class="faq-answer">
+                <p>Yes, I also do "normal" private tutoring of Hebrew. If that's what you prefer at the moment you can still <a href="../contact/index.html">contact me</a> for that purpose. A level of mastery that would suffice for participation in my courses can be achieved within approximately half year of intensive (twice a week) study plan.</p>
+            </div>
+        </details>
+
+        <!-- FAQ Item 2 -->
+        <details class="faq-item">
+            <summary class="faq-question">Are all the courses the same level?</summary>
+            <div class="faq-answer">
+                <p>Even though all courses are attended by students of different levels of Hebrew, the earlier courses are slightly easier than the more advanced ones. This is due to the fact that the courses were originally conducted with a core of returning students attending virtually all of them, so some topics are covered more thoroughly in the first courses. Nevertheless, the focus of the classes is the text at hand and not the language concepts themselves. That allows me to expand on those concepts whenever I feel it is necessary. Bottom line is if you are on the beginners side, it is recommended to start from Genesis, but you can still gain a lot from other courses.</p>
+            </div>
+        </details>
+
+        <!-- FAQ Item 3 -->
+        <details class="faq-item">
+            <summary class="faq-question">What sets you and your courses apart from similar courses available online?</summary>
+            <div class="faq-answer">
+                <p>The main thing that sets my courses apart is the particular dosing of language learning on one hand, together with bible studies on the other. There are indeed many courses out there where you can learn Hebrew or Biblical Hebrew. I teach and taught in some of them myself. There also are many bible study groups, both online as well as in the real world. My courses were born out of an attempt to take Hebrew learners and equip them with conventional analytic tools and accompany them as they apply their hard earned knowledge of both Hebrew language and the Hebrew bible in real life. In practice, it means we study thoroughly text units from within the bible. That allows us to both understand these texts better, and also learn through them about the language (and by extension - the culture and history) in which they were originally written.</p>
+            </div>
+        </details>
+
+        <!-- FAQ Item 4 -->
+        <details class="faq-item">
+            <summary class="faq-question">What is the size of your classes?</summary>
+            <div class="faq-answer">
+                <p>I keep my classes at a maximum number of 7 students, often fewer, so as to allow for an intimate yet fruitful and engaging study atmosphere.</p>
+            </div>
+        </details>
+
+        <!-- FAQ Item 5 -->
+        <details class="faq-item">
+            <summary class="faq-question">What do you actually teach?</summary>
+            <div class="faq-answer">
+                <p>The courses were originally created as a cooperation with another online Hebrew school, titled "Reading the Bible Together". That means that a heterogenous group of Hebrew learners would meet to read the bible in Hebrew. Our main focus was the text itself, coupled with Biblical Hebrew language related materials.</p>
+                <p>Each course consists of 7 classes (45 min. each) taught on a weekly basis in the afternoon (EST time), typically covering one chapter (for example: Genesis 18, Deuteronomy 5, Isaiah 5, etc.). A full list of courses is available under my <a href="../courses/index.html">courses tab</a>, where you can find courses covering chapters from the books of Genesis, Exodus, Deuteronomy and Isaiah. The list updates every couple of weeks as soon as a new course is ready to launch.</p>
+                <p>During class, we read together the Hebrew text, verse by verse, and discuss primarily language related aspects that the particular verses at hand present us with, compare it to other biblical texts (which we also read aloud, of course!) and to contemporary ancient near eastern sources that can shed light on the issue at stake.</p>
+            </div>
+        </details>
+
+        <!-- FAQ Item 6 -->
+        <details class="faq-item">
+            <summary class="faq-question">Are there other activities Beyond the 45 minutes classes?</summary>
+            <div class="faq-answer">
+                <p>Yes. After each unit I send you exercises, flashcards and more. Additionally, each study group has its own Whatsapp group where the students can ask questions and discuss freely. It can take me time to reply on those, but I never left an unattended inquiry!</p>
+            </div>
+        </details>
+
+        <!-- FAQ Item 7 -->
+        <details class="faq-item">
+            <summary class="faq-question">Can I participate only partially?</summary>
+            <div class="faq-answer">
+                <p>The courses are offered as entire units, so the short answer is no. However, I make sure to record my lessons, so if you missed a class you will always have a recording that allows you to return the following week without missing out much.</p>
+            </div>
+        </details>
+
+        <!-- FAQ Item 8 -->
+        <details class="faq-item">
+            <summary class="faq-question">Are you promoting a particular religious agenda?</summary>
+            <div class="faq-answer">
+                <p>We all have our innate biases, myself included. I try my best to be aware and open about my own. I define myself as an Israeli, secular Jew. What it means is that I am more familiar with academic and rabbinical approaches to the text. However, I am not a religious or other spiritual authority, thus I don't seek to influence my students' (some of whom actually ARE priests and Rabbis who are way more eligible to discuss faith related issues than me!) religious beliefs. My focus is primarily to help you read the text in Hebrew. You are welcome to take this knowledge to your own spiritual home, wherever it might be. Needless to say, whatever your beliefs are, you are warmly welcome, as long as you are respectful of the different views and beliefs voiced in class.</p>
+            </div>
+        </details>
+
+        <!-- FAQ Item 9 -->
+        <details class="faq-item">
+            <summary class="faq-question">Can I see a recorded class, to get an impression?</summary>
+            <div class="faq-answer">
+                <!-- IMPORTANT: Replace # with your actual YouTube link -->
+                <p>Sure, <a href="https://www.youtube.com/watch?v=TT5JQ5oIzpY">here's</a> a class I conducted a while ago, as part of the Deuteronomy 6 course. You won't find much beyond that because my recorded classes are unlisted, available only to the students themseves. To protect the privacy of my students, I never share anything without their consent.</p>
+                <p>Either way, keep in mind that a class is not a video production, and the experience of learning through interaction is different from learning through watching or reading. Thus, I would invite you to take part in an example class with one of my active groups, which in my opinion can give you a better idea of what to expect.</p>
+            </div>
+        </details>
+
+        <!-- FAQ Item 10 -->
+        <details class="faq-item">
+            <summary class="faq-question">How does enrollment go?</summary>
+            <div class="faq-answer">
+                <p>In order to enroll in one of the courses you need to contact me, either through the <a href="../contact/index.html">contact tab</a> or via email. Even though available courses are published on the <a href="../MainPage/index.html">home page</a> and on my <a href="https://www.facebook.com/profile.php?id=61570257167649" target="_blank" rel="noopener noreferrer">Facebook page</a>, they still tend to be very dynamic, so I prefer to pass students real-time information about available courses personally. We are a small "school", which means I have a few active groups at the moment, plus a few of the courses listed (not all!) that are scheduled to start within weeks or months, at a designated day and time for the weekly meetings. In case the course that interests you doesn't have an immediate date to start, or doesn't suit your availability, don't worry! As soon as registration enables me to open the class, I'll let you know.</p>
+            </div>
+        </details>
+
+        <!-- FAQ Item 11 -->
+        <details class="faq-item">
+            <summary class="faq-question">How much does it cost and how do I pay?</summary>
+            <div class="faq-answer">
+                <p>A singular course costs 180$, and a 3 course package costs 500$. Each course consists of 7 classes, 45 minutes each. Since It is a small operation, all payment related issues are concluded through direct communication with me! I prefer it this way over an automatic purchase on the website at this point. Payments are possible via Paypal, credit card or bank transfer. Once payment is made, you will receive an email with all the links and materials necessary.</p>
+            </div>
+        </details>
 
 
-        <p>For more information about the offered courses and their curricula, go to "My courses" tab or <a href="../courses/index.html">click here</a>.</p>
-        <!-- Link goes UP ../ then INTO courses/ -->
+                <!-- === Added Contact Form Section === -->
+                <section class="faq-contact-section">
+                    <h2>Still Have Questions?</h2>
+                    <p>If you couldn't find your answer above, feel free to send me a message!</p>
+        
+                    <!-- Use same classes as main contact form for consistent styling -->
+                    <form class="contact-form faq-form" action="https://formsubmit.co/ilanabutbul@gmail.com" method="POST">
+        
+                        <!-- Configure FormSubmit Options -->
+                        <input type="hidden" name="_subject" value="New Question from FAQ Page - Bible Ilan Website">
+                        <input type="hidden" name="_captcha" value="true">
+                        <!-- Optional: Redirect to a thank you page -->
+                        <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thankyou_faq.html"> -->
+        
+                        <div class="form-group">
+                            <label for="faq-name">Name<span class="required">*</span></label>
+                            <!-- Changed id/name slightly to avoid potential conflicts if sharing JS -->
+                            <input type="text" id="faq-name" name="user_name" placeholder="Your Name" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="faq-email">Email<span class="required">*</span></label>
+                            <input type="email" id="faq-email" name="email" placeholder="your.email@example.com" required>
+                        </div>
 
-       <p> For more information about my teaching approach and general issues, go to Frequently Asked Questions tab or <a href="../faq/index.html">click here</a>.</p>
-       <!-- Link goes UP ../ then INTO faq/ -->
+                         <!-- UPDATED Phone Field with Full Prefix List -->
+                <div class="form-group phone-group">
+                    <label for="faq-phone-number">Phone (Optional)</label>
+                    <div class="phone-inputs-wrapper">
+                       <select id="faq-phone-prefix" name="phone_prefix" aria-label="Country Code Prefix">
+                            <option value="" selected>Prefix</option> <!-- Changed default -->
+                            <option data-countryCode="AF" value="+93">Afghanistan (+93)</option>
+                            <option data-countryCode="AL" value="+355">Albania (+355)</option>
+                            <option data-countryCode="DZ" value="+213">Algeria (+213)</option>
+                            <option data-countryCode="AS" value="+1684">American Samoa (+1684)</option>
+                            <option data-countryCode="AD" value="+376">Andorra (+376)</option>
+                            <option data-countryCode="AO" value="+244">Angola (+244)</option>
+                            <option data-countryCode="AI" value="+1264">Anguilla (+1264)</option>
+                            <option data-countryCode="AQ" value="+672">Antarctica (+672)</option>
+                            <option data-countryCode="AG" value="+1268">Antigua & Barbuda (+1268)</option>
+                            <option data-countryCode="AR" value="+54">Argentina (+54)</option>
+                            <option data-countryCode="AM" value="+374">Armenia (+374)</option>
+                            <option data-countryCode="AW" value="+297">Aruba (+297)</option>
+                            <option data-countryCode="AU" value="+61">Australia (+61)</option>
+                            <option data-countryCode="AT" value="+43">Austria (+43)</option>
+                            <option data-countryCode="AZ" value="+994">Azerbaijan (+994)</option>
+                            <option data-countryCode="BS" value="+1242">Bahamas (+1242)</option>
+                            <option data-countryCode="BH" value="+973">Bahrain (+973)</option>
+                            <option data-countryCode="BD" value="+880">Bangladesh (+880)</option>
+                            <option data-countryCode="BB" value="+1246">Barbados (+1246)</option>
+                            <option data-countryCode="BY" value="+375">Belarus (+375)</option>
+                            <option data-countryCode="BE" value="+32">Belgium (+32)</option>
+                            <option data-countryCode="BZ" value="+501">Belize (+501)</option>
+                            <option data-countryCode="BJ" value="+229">Benin (+229)</option>
+                            <option data-countryCode="BM" value="+1441">Bermuda (+1441)</option>
+                            <option data-countryCode="BT" value="+975">Bhutan (+975)</option>
+                            <option data-countryCode="BO" value="+591">Bolivia (+591)</option>
+                            <option data-countryCode="BA" value="+387">Bosnia Herzegovina (+387)</option>
+                            <option data-countryCode="BW" value="+267">Botswana (+267)</option>
+                            <option data-countryCode="BR" value="+55">Brazil (+55)</option>
+                            <option data-countryCode="IO" value="+246">British Indian Ocean Territory (+246)</option>
+                            <option data-countryCode="VG" value="+1284">British Virgin Islands (+1284)</option>
+                            <option data-countryCode="BN" value="+673">Brunei (+673)</option>
+                            <option data-countryCode="BG" value="+359">Bulgaria (+359)</option>
+                            <option data-countryCode="BF" value="+226">Burkina Faso (+226)</option>
+                            <option data-countryCode="BI" value="+257">Burundi (+257)</option>
+                            <option data-countryCode="KH" value="+855">Cambodia (+855)</option>
+                            <option data-countryCode="CM" value="+237">Cameroon (+237)</option>
+                            <option data-countryCode="CA" value="+1">Canada (+1)</option>
+                            <option data-countryCode="CV" value="+238">Cape Verde Islands (+238)</option>
+                            <option data-countryCode="KY" value="+1345">Cayman Islands (+1345)</option>
+                            <option data-countryCode="CF" value="+236">Central African Republic (+236)</option>
+                            <option data-countryCode="TD" value="+235">Chad (+235)</option>
+                            <option data-countryCode="CL" value="+56">Chile (+56)</option>
+                            <option data-countryCode="CN" value="+86">China (+86)</option>
+                            <option data-countryCode="CX" value="+61">Christmas Island (+61)</option>
+                            <option data-countryCode="CC" value="+61">Cocos (Keeling) Islands (+61)</option>
+                            <option data-countryCode="CO" value="+57">Colombia (+57)</option>
+                            <option data-countryCode="KM" value="+269">Comoros (+269)</option>
+                            <option data-countryCode="CG" value="+242">Congo (+242)</option>
+                            <option data-countryCode="CD" value="+243">Congo, Dem. Rep. of (Zaïre) (+243)</option>
+                            <option data-countryCode="CK" value="+682">Cook Islands (+682)</option>
+                            <option data-countryCode="CR" value="+506">Costa Rica (+506)</option>
+                            <option data-countryCode="HR" value="+385">Croatia (+385)</option>
+                            <option data-countryCode="CU" value="+53">Cuba (+53)</option>
+                            <option data-countryCode="CW" value="+5999">Curaçao (+5999)</option>
+                            <option data-countryCode="CY" value="+357">Cyprus South (+357)</option>
+                            <option data-countryCode="CZ" value="+420">Czech Republic (+420)</option>
+                            <option data-countryCode="DK" value="+45">Denmark (+45)</option>
+                            <option data-countryCode="DJ" value="+253">Djibouti (+253)</option>
+                            <option data-countryCode="DM" value="+1809">Dominica (+1809)</option>
+                            <option data-countryCode="DO" value="+1809">Dominican Republic (+1809)</option>
+                            <option data-countryCode="TL" value="+670">East Timor (+670)</option>
+                            <option data-countryCode="EC" value="+593">Ecuador (+593)</option>
+                            <option data-countryCode="EG" value="+20">Egypt (+20)</option>
+                            <option data-countryCode="SV" value="+503">El Salvador (+503)</option>
+                            <option data-countryCode="GQ" value="+240">Equatorial Guinea (+240)</option>
+                            <option data-countryCode="ER" value="+291">Eritrea (+291)</option>
+                            <option data-countryCode="EE" value="+372">Estonia (+372)</option>
+                            <option data-countryCode="ET" value="+251">Ethiopia (+251)</option>
+                            <option data-countryCode="FK" value="+500">Falkland Islands (+500)</option>
+                            <option data-countryCode="FO" value="+298">Faroe Islands (+298)</option>
+                            <option data-countryCode="FJ" value="+679">Fiji (+679)</option>
+                            <option data-countryCode="FI" value="+358">Finland (+358)</option>
+                            <option data-countryCode="FR" value="+33">France (+33)</option>
+                            <option data-countryCode="GF" value="+594">French Guiana (+594)</option>
+                            <option data-countryCode="PF" value="+689">French Polynesia (+689)</option>
+                            <option data-countryCode="GA" value="+241">Gabon (+241)</option>
+                            <option data-countryCode="GM" value="+220">Gambia (+220)</option>
+                            <option data-countryCode="GE" value="+995">Georgia (+995)</option>
+                            <option data-countryCode="DE" value="+49">Germany (+49)</option>
+                            <option data-countryCode="GH" value="+233">Ghana (+233)</option>
+                            <option data-countryCode="GI" value="+350">Gibraltar (+350)</option>
+                            <option data-countryCode="GR" value="+30">Greece (+30)</option>
+                            <option data-countryCode="GL" value="+299">Greenland (+299)</option>
+                            <option data-countryCode="GD" value="+1473">Grenada (+1473)</option>
+                            <option data-countryCode="GP" value="+590">Guadeloupe (+590)</option>
+                            <option data-countryCode="GU" value="+1671">Guam (+1671)</option>
+                            <option data-countryCode="GT" value="+502">Guatemala (+502)</option>
+                            <option data-countryCode="GG" value="+44">Guernsey (+44)</option>
+                            <option data-countryCode="GN" value="+224">Guinea (+224)</option>
+                            <option data-countryCode="GW" value="+245">Guinea-Bissau (+245)</option>
+                            <option data-countryCode="GY" value="+592">Guyana (+592)</option>
+                            <option data-countryCode="HT" value="+509">Haiti (+509)</option>
+                            <option data-countryCode="HN" value="+504">Honduras (+504)</option>
+                            <option data-countryCode="HK" value="+852">Hong Kong (+852)</option>
+                            <option data-countryCode="HU" value="+36">Hungary (+36)</option>
+                            <option data-countryCode="IS" value="+354">Iceland (+354)</option>
+                            <option data-countryCode="IN" value="+91">India (+91)</option>
+                            <option data-countryCode="ID" value="+62">Indonesia (+62)</option>
+                            <option data-countryCode="IR" value="+98">Iran (+98)</option>
+                            <option data-countryCode="IQ" value="+964">Iraq (+964)</option>
+                            <option data-countryCode="IE" value="+353">Ireland (+353)</option>
+                            <option data-countryCode="IM" value="+44">Isle of Man (+44)</option>
+                            <option data-countryCode="IL" value="+972">Israel (+972)</option>
+                            <option data-countryCode="IT" value="+39">Italy (+39)</option>
+                            <option data-countryCode="CI" value="+225">Ivory Coast (+225)</option>
+                            <option data-countryCode="JM" value="+1876">Jamaica (+1876)</option>
+                            <option data-countryCode="JP" value="+81">Japan (+81)</option>
+                            <option data-countryCode="JE" value="+44">Jersey (+44)</option>
+                            <option data-countryCode="JO" value="+962">Jordan (+962)</option>
+                            <option data-countryCode="KZ" value="+7">Kazakhstan (+7)</option>
+                            <option data-countryCode="KE" value="+254">Kenya (+254)</option>
+                            <option data-countryCode="KI" value="+686">Kiribati (+686)</option>
+                            <option data-countryCode="KP" value="+850">Korea North (+850)</option>
+                            <option data-countryCode="KR" value="+82">Korea South (+82)</option>
+                            <option data-countryCode="XK" value="+383">Kosovo (+383)</option>
+                            <option data-countryCode="KW" value="+965">Kuwait (+965)</option>
+                            <option data-countryCode="KG" value="+996">Kyrgyzstan (+996)</option>
+                            <option data-countryCode="LA" value="+856">Laos (+856)</option>
+                            <option data-countryCode="LV" value="+371">Latvia (+371)</option>
+                            <option data-countryCode="LB" value="+961">Lebanon (+961)</option>
+                            <option data-countryCode="LS" value="+266">Lesotho (+266)</option>
+                            <option data-countryCode="LR" value="+231">Liberia (+231)</option>
+                            <option data-countryCode="LY" value="+218">Libya (+218)</option>
+                            <option data-countryCode="LI" value="+423">Liechtenstein (+423)</option>
+                            <option data-countryCode="LT" value="+370">Lithuania (+370)</option>
+                            <option data-countryCode="LU" value="+352">Luxembourg (+352)</option>
+                            <option data-countryCode="MO" value="+853">Macao (+853)</option>
+                            <option data-countryCode="MK" value="+389">Macedonia (+389)</option>
+                            <option data-countryCode="MG" value="+261">Madagascar (+261)</option>
+                            <option data-countryCode="MW" value="+265">Malawi (+265)</option>
+                            <option data-countryCode="MY" value="+60">Malaysia (+60)</option>
+                            <option data-countryCode="MV" value="+960">Maldives (+960)</option>
+                            <option data-countryCode="ML" value="+223">Mali (+223)</option>
+                            <option data-countryCode="MT" value="+356">Malta (+356)</option>
+                            <option data-countryCode="MH" value="+692">Marshall Islands (+692)</option>
+                            <option data-countryCode="MQ" value="+596">Martinique (+596)</option>
+                            <option data-countryCode="MR" value="+222">Mauritania (+222)</option>
+                            <option data-countryCode="MU" value="+230">Mauritius (+230)</option>
+                            <option data-countryCode="YT" value="+262">Mayotte (+262)</option>
+                            <option data-countryCode="MX" value="+52">Mexico (+52)</option>
+                            <option data-countryCode="FM" value="+691">Micronesia (+691)</option>
+                            <option data-countryCode="MD" value="+373">Moldova (+373)</option>
+                            <option data-countryCode="MC" value="+377">Monaco (+377)</option>
+                            <option data-countryCode="MN" value="+976">Mongolia (+976)</option>
+                            <option data-countryCode="ME" value="+382">Montenegro (+382)</option>
+                            <option data-countryCode="MS" value="+1664">Montserrat (+1664)</option>
+                            <option data-countryCode="MA" value="+212">Morocco (+212)</option>
+                            <option data-countryCode="MZ" value="+258">Mozambique (+258)</option>
+                            <option data-countryCode="MM" value="+95">Myanmar (+95)</option>
+                            <option data-countryCode="NA" value="+264">Namibia (+264)</option>
+                            <option data-countryCode="NR" value="+674">Nauru (+674)</option>
+                            <option data-countryCode="NP" value="+977">Nepal (+977)</option>
+                            <option data-countryCode="NL" value="+31">Netherlands (+31)</option>
+                            <option data-countryCode="NC" value="+687">New Caledonia (+687)</option>
+                            <option data-countryCode="NZ" value="+64">New Zealand (+64)</option>
+                            <option data-countryCode="NI" value="+505">Nicaragua (+505)</option>
+                            <option data-countryCode="NE" value="+227">Niger (+227)</option>
+                            <option data-countryCode="NG" value="+234">Nigeria (+234)</option>
+                            <option data-countryCode="NU" value="+683">Niue (+683)</option>
+                            <option data-countryCode="NF" value="+672">Norfolk Islands (+672)</option>
+                            <option data-countryCode="MP" value="+1670">Northern Mariana Islands (+1670)</option>
+                            <option data-countryCode="NO" value="+47">Norway (+47)</option>
+                            <option data-countryCode="OM" value="+968">Oman (+968)</option>
+                            <option data-countryCode="PK" value="+92">Pakistan (+92)</option>
+                            <option data-countryCode="PW" value="+680">Palau (+680)</option>
+                            <option data-countryCode="PS" value="+970">Palestine (+970)</option>
+                            <option data-countryCode="PA" value="+507">Panama (+507)</option>
+                            <option data-countryCode="PG" value="+675">Papua New Guinea (+675)</option>
+                            <option data-countryCode="PY" value="+595">Paraguay (+595)</option>
+                            <option data-countryCode="PE" value="+51">Peru (+51)</option>
+                            <option data-countryCode="PH" value="+63">Philippines (+63)</option>
+                            <option data-countryCode="PN" value="+870">Pitcairn Islands (+870)</option>
+                            <option data-countryCode="PL" value="+48">Poland (+48)</option>
+                            <option data-countryCode="PT" value="+351">Portugal (+351)</option>
+                            <option data-countryCode="PR" value="+1">Puerto Rico (+1)</option>
+                            <option data-countryCode="QA" value="+974">Qatar (+974)</option>
+                            <option data-countryCode="RE" value="+262">Reunion (+262)</option>
+                            <option data-countryCode="RO" value="+40">Romania (+40)</option>
+                            <option data-countryCode="RU" value="+7">Russia (+7)</option>
+                            <option data-countryCode="RW" value="+250">Rwanda (+250)</option>
+                            <option data-countryCode="BL" value="+590">Saint Barthelemy (+590)</option>
+                            <option data-countryCode="SH" value="+290">Saint Helena (+290)</option>
+                            <option data-countryCode="KN" value="+1869">Saint Kitts & Nevis (+1869)</option>
+                            <option data-countryCode="LC" value="+1758">Saint Lucia (+1758)</option>
+                            <option data-countryCode="MF" value="+590">Saint Martin (+590)</option>
+                            <option data-countryCode="PM" value="+508">Saint Pierre & Miquelon (+508)</option>
+                            <option data-countryCode="VC" value="+1784">Saint Vincent & the Grenadines (+1784)</option>
+                            <option data-countryCode="WS" value="+685">Samoa (+685)</option>
+                            <option data-countryCode="SM" value="+378">San Marino (+378)</option>
+                            <option data-countryCode="ST" value="+239">Sao Tome & Principe (+239)</option>
+                            <option data-countryCode="SA" value="+966">Saudi Arabia (+966)</option>
+                            <option data-countryCode="SN" value="+221">Senegal (+221)</option>
+                            <option data-countryCode="RS" value="+381">Serbia (+381)</option>
+                            <option data-countryCode="SC" value="+248">Seychelles (+248)</option>
+                            <option data-countryCode="SL" value="+232">Sierra Leone (+232)</option>
+                            <option data-countryCode="SG" value="+65">Singapore (+65)</option>
+                            <option data-countryCode="SX" value="+1721">Sint Maarten (+1721)</option>
+                            <option data-countryCode="SK" value="+421">Slovakia (+421)</option>
+                            <option data-countryCode="SI" value="+386">Slovenia (+386)</option>
+                            <option data-countryCode="SB" value="+677">Solomon Islands (+677)</option>
+                            <option data-countryCode="SO" value="+252">Somalia (+252)</option>
+                            <option data-countryCode="ZA" value="+27">South Africa (+27)</option>
+                            <option data-countryCode="SS" value="+211">South Sudan (+211)</option>
+                            <option data-countryCode="ES" value="+34">Spain (+34)</option>
+                            <option data-countryCode="LK" value="+94">Sri Lanka (+94)</option>
+                            <option data-countryCode="SD" value="+249">Sudan (+249)</option>
+                            <option data-countryCode="SR" value="+597">Suriname (+597)</option>
+                            <option data-countryCode="SJ" value="+47">Svalbard & Jan Mayen (+47)</option>
+                            <option data-countryCode="SZ" value="+268">Swaziland (+268)</option>
+                            <option data-countryCode="SE" value="+46">Sweden (+46)</option>
+                            <option data-countryCode="CH" value="+41">Switzerland (+41)</option>
+                            <option data-countryCode="SY" value="+963">Syria (+963)</option>
+                            <option data-countryCode="TW" value="+886">Taiwan (+886)</option>
+                            <option data-countryCode="TJ" value="+992">Tajikistan (+992)</option>
+                            <option data-countryCode="TZ" value="+255">Tanzania (+255)</option>
+                            <option data-countryCode="TH" value="+66">Thailand (+66)</option>
+                            <option data-countryCode="TG" value="+228">Togo (+228)</option>
+                            <option data-countryCode="TK" value="+690">Tokelau (+690)</option>
+                            <option data-countryCode="TO" value="+676">Tonga (+676)</option>
+                            <option data-countryCode="TT" value="+1868">Trinidad & Tobago (+1868)</option>
+                            <option data-countryCode="TN" value="+216">Tunisia (+216)</option>
+                            <option data-countryCode="TR" value="+90">Turkey (+90)</option>
+                            <option data-countryCode="TM" value="+993">Turkmenistan (+993)</option>
+                            <option data-countryCode="TC" value="+1649">Turks & Caicos Islands (+1649)</option>
+                            <option data-countryCode="TV" value="+688">Tuvalu (+688)</option>
+                            <option data-countryCode="VI" value="+1340">U.S. Virgin Islands (+1340)</option>
+                            <option data-countryCode="UG" value="+256">Uganda (+256)</option>
+                            <option data-countryCode="GB" value="+44">UK (+44)</option>
+                            <option data-countryCode="UA" value="+380">Ukraine (+380)</option>
+                            <option data-countryCode="AE" value="+971">United Arab Emirates (+971)</option>
+                            <option data-countryCode="UY" value="+598">Uruguay (+598)</option>
+                            <option data-countryCode="US" value="+1">USA (+1)</option>
+                            <option data-countryCode="UZ" value="+998">Uzbekistan (+998)</option>
+                            <option data-countryCode="VU" value="+678">Vanuatu (+678)</option>
+                            <option data-countryCode="VA" value="+379">Vatican City (+379)</option>
+                            <option data-countryCode="VE" value="+58">Venezuela (+58)</option>
+                            <option data-countryCode="VN" value="+84">Vietnam (+84)</option>
+                            <option data-countryCode="WF" value="+681">Wallis & Futuna (+681)</option>
+                            <option data-countryCode="YE" value="+967">Yemen (+967)</option>
+                            <option data-countryCode="ZM" value="+260">Zambia (+260)</option>
+                            <option data-countryCode="ZW" value="+263">Zimbabwe (+263)</option>
+                            <option value="Other">Other Prefix (Specify in Message)</option>
+                       </select>
+                       <input type="tel" id="faq-phone-number" name="phone_number" aria-label="Phone Number" placeholder="Number (digits only)" pattern="[0-9\s\-]*">
+                   </div>
+               </div> <!-- End phone-group -->
 
-       <p> For enrollment or contact go to Contact tab or <a href="../contact/index.html">click here</a>.</p>
-       <!-- Link goes UP ../ then INTO contact/ (Assuming contact folder exists) -->
+        
+                        <div class="form-group">
+                            <label for="faq-message">Message<span class="required">*</span></label>
+                            <textarea id="faq-message" name="message" rows="6" placeholder="Your question or message..." required></textarea>
+                         </div>
+        
+                         <div class="form-group form-submit-button">
+                            <button type="submit">Send Question</button>
+                         </div>
+        
+                    </form>
+                </section>
+                <!-- === End Added Contact Form Section === -->
 
-        <!-- This paragraph's content remains in italics -->
-        <p><i>In the background: Torah scrolls and Hanukiah that survived the Nazi extermination of the Jewish residents of the towns around Opatów, Świętokrzyskie county, Poland. The items are presented in the vicinity of a local church.</i></p>
-        <!-- Add more content here as needed -->
     </main>
 
     <footer class="site-footer">
+        <!-- Make sure copyright name is consistent -->
         <p>© 2025 Ilan Abutbul. All rights reserved.</p>
-        <!-- Add footer links or info if needed -->
     </footer>
 
-    <!-- Link to JS file within this MainPage folder -->
+    <!-- Link to JS within the *current* faq folder -->
     <script src="script.js"></script>
 
 </body>
