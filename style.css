@@ -19,77 +19,146 @@ body {
 
 /* =================================== */
 /* === HEADER, LOGO, NAV STYLING === */
-/* (Keep all your existing header styles - unchanged) */
 /* =================================== */
+
 .site-header {
-    position: sticky; top: 0; z-index: 100; background-color: rgba(240, 240, 240, 0.92); border-bottom: 2px solid #cccccc; display: flex; align-items: center; padding: 0 1rem; min-height: 120px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(240, 240, 240, 0.92);
+    border-bottom: 2px solid #cccccc;
+    display: flex;
+    align-items: center;
+    /* Removed justify-content, will use auto margins */
+    padding: 0 1rem;
+    min-height: 120px; /* Adjust based on largest item height */
 }
-.main-nav { margin-left: 20px; margin-right: 20px; text-align: center;}
-.main-nav ul { list-style: none; display: inline-flex; padding: 0; flex-wrap: wrap; margin: 0; }
-.main-nav li { margin: 0 0.8rem; }
-.main-nav a { color: #333333; text-decoration: none; font-weight: 600; padding: 0.5rem 0.8rem; transition: background-color 0.3s ease, color 0.3s ease; border-radius: 4px; display: inline-block; white-space: nowrap; }
+
+.main-nav {
+   /* Centered using auto margins, may need flex-grow if needed */
+   /* flex-grow: 1; */
+   text-align: center;
+   /* Let auto margins do the work */
+   margin-left: 20px; /* Add some space from potential left item */
+   margin-right: 20px; /* Add some space from right item */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: inline-flex;
+    padding: 0;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.main-nav li {
+    margin: 0 0.8rem;
+}
+
+.main-nav a {
+    color: #333333; text-decoration: none; font-weight: 600; padding: 0.5rem 0.8rem; transition: background-color 0.3s ease, color 0.3s ease; border-radius: 4px; display: inline-block; white-space: nowrap;
+}
 .main-nav a:hover, .main-nav a:focus { background-color: #dddddd; color: #000000; outline: none; }
-.main-nav a.active { background-color: #55aaff; color: #ffffff; font-weight: bold;} /* Ensure this style is present */
-.header-icons { display: flex; align-items: center; gap: 15px; margin-left: auto; }
-#site-logo { width: 100px; height: auto; display: block; order: 2; }
-.social-icon-link { line-height: 0; order: 1; display: block; }
-.social-icon { width: 32px; height: 32px; display: block; transition: opacity 0.2s ease; }
-.social-icon:hover { opacity: 0.8; }
+.main-nav a.active { background-color: #55aaff; color: #ffffff; }
+
+/* === Icon Container Styling (Pushed to the right) === */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between icons */
+    /* --- KEY CHANGE: Pushes icon container right --- */
+    margin-left: auto;
+}
+
+/* Site Logo Styling (inside .header-icons) */
+#site-logo {
+    width: 100px;      /* Keep previous desired width */
+    height: auto;
+    display: block;
+    order: 2;         /* Ensure logo is visually second */
+    /* Removed auto margins */
+}
+
+/* === Facebook Icon Styling === */
+.social-icon-link {
+    line-height: 0;
+    order: 1;         /* Ensure FB icon is visually first */
+    display: block;
+}
+
+.social-icon {
+    /* Since you resized the file, we still specify size */
+    /* Use dimensions close to your resized image */
+    width: 32px;      /* e.g., standard icon size */
+    height: 32px;
+    display: block;
+    transition: opacity 0.2s ease;
+}
+.social-icon:hover {
+    opacity: 0.8;
+}
 
 /* ======================================= */
-/* === MAIN CONTENT === */
+/* === MAIN CONTENT BASE STYLES === */
 /* ======================================= */
 #main-content {
-    max-width: 960px; /* Limits width */
-    margin: 2rem auto; /* Centers horizontally */
-    padding: 25px; /* Added/adjusted padding */
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+}
+#main-content h1 {
+    color: #000000; margin-bottom: 1.5rem; font-size: 3.2em; font-weight: 700; text-align: center; text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+}
+#main-content a { color: #004a9e; text-decoration: underline; text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.6); font-weight: 700; }
+#main-content a:hover { color: #00336d; }
+
+
+/* ======================================== */
+/* === ABOUT PAGE SPECIFIC STYLES === */
+/* ======================================== */
+.about-container {
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.3); /* 30% opacity */
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.about-image {
+    float: right;
+    width: 180px;
+    height: auto;
+    margin-top: 0; /* Aligned with top of text flow */
+    margin-left: 25px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.about-text p {
+    /* Text Appearance */
     font-size: 1.2em;
     font-weight: 600;
     color: #000000;
-    text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.6); /* Text shadow for readability */
-
-    /* --- CHANGE: Add semi-transparent background --- */
-    background-color: rgba(255, 255, 255, 0.3); /* 30% opaque white - adjust as needed */
-    border-radius: 5px; /* Optional: adds slightly rounded corners */
-}
-
-#main-content h1 {
-    color: #000000;
-    margin-bottom: 1.5rem;
-    font-size: 3.2em;
-    font-weight: 700;
-    text-align: center;
-    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
-}
-
-#main-content p {
+    text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.6);
+    /* Text Flow & Alignment */
     line-height: 1.7;
     margin-bottom: 1.3em;
-    /* --- CHANGE: Justify text --- */
+    /* --- JUSTIFIED TEXT --- */
     text-align: justify;
 }
+.about-text p:last-child {
+     margin-bottom: 0;
+}
 
-#main-content a {
-    color: #004a9e;
-    text-decoration: underline;
-    text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.6);
-    font-weight: 700;
-}
-#main-content a:hover {
-    color: #00336d;
-}
 
 /* ======================================= */
 /* === FOOTER === */
-/* (Keep existing footer styles - unchanged) */
 /* ======================================= */
 .site-footer {
     text-align: center; margin-top: 2rem; padding: 1rem; font-size: 0.9em; color: #fff; background-color: rgba(51, 51, 51, 0.8); border-top: 1px solid #ccc;
 }
 
 /* ======================================= */
-/* === RESPONSIVE ADJUSTMENTS === */
-/* (Keep existing responsive styles - unchanged) */
+/* === RESPONSIVE ADJUSTMENTS          === */
 /* ======================================= */
 @media (max-width: 600px) {
     .site-header {
@@ -100,9 +169,10 @@ body {
     }
 
     .main-nav {
-        width: 100%;
-        order: 2;
-        margin: 0.5rem 0 0 0;
+        /* flex-grow removed */
+        width: 100%; /* Full width */
+        order: 2;   /* Nav below icons */
+        margin: 0.5rem 0 0 0; /* Reset margins, add top space */
         text-align: center;
     }
      .main-nav ul { justify-content: center; }
@@ -111,24 +181,19 @@ body {
 
     .header-icons {
          gap: 10px;
-         margin-left: 0;
-         order: 1;
+         margin-left: 0; /* Reset margin when stacked */
+         order: 1; /* Icons above nav */
+         /* Center icons container */
          width: 100%;
          justify-content: center;
     }
 
     #site-logo { width: 60px; order: 2; }
+
     .social-icon-link { order: 1; }
     .social-icon { width: 28px; height: 28px; }
 
     /* Content styling */
-    #main-content {
-         font-size: 1.1em;
-         padding: 15px; /* Reduce padding on smaller screens */
-    }
+    #main-content { font-size: 1.1em; }
     #main-content h1 { font-size: 2.5em; }
-
-    #main-content p {
-        text-align: left; /* Switch back from justify on small screens if desired */
-    }
 }

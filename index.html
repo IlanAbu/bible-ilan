@@ -3,69 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bible-Ilan - Main Page</title>
-    <!-- Link to CSS file within this MainPage folder -->
+    <title>My Website - About Me</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-</head>
-<body>
+
     <header class="site-header">
- 
-<!-- Navigation SECOND -->
-<nav class="main-nav">
-    <!-- ... your ul and li elements ... -->
-</nav>
+        <!-- Navigation -->
         <nav class="main-nav">
             <ul>
-                <!-- Link to self (index.html within this MainPage folder) -->
                 <li><a href="../MainPage/index.html">Main Page</a></li>
-                <!-- Links go UP one level (../) then INTO the target folder -->
                 <li><a href="../faq/index.html">FAQ</a></li>
                 <li><a href="../courses/index.html">Courses</a></li>
-                <li><a href="../about/index.html">About Me</a></li>
+                <li><a href="./index.html">About Me</a></li> <!-- Active link -->
                 <li><a href="../bookshelf/index.html">Book Shelf</a></li>
                 <li><a href="../contact/index.html">Contact</a></li>
             </ul>
         </nav>
+        <!-- Icons -->
         <div class="header-icons">
-            <!-- Clickable Facebook Icon (add this part) -->
-            <a href="https://www.facebook.com/profile.php?id=61570257167649" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Visit our Facebook Profile">
+             <a href="https://www.facebook.com/profile.php?id=61570257167649" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Visit our Facebook Profile">
                  <img src="../images/Facebook.png" alt="Facebook logo" class="social-icon">
             </a>
-            <!-- Existing Site Logo -->
             <img id="site-logo" src="../images/logo.png" alt="Bible Ilan Logo">
         </div>
     </header>
 
     <main id="main-content">
-        <h1>Welcome to my Hebrew Bible studies website!</h1>
-        <p>Throughout my decades long journey as a Biblical Hebrew teacher and scholar, I have created dozens of text based courses, which I now invite you to join.</p>
+        <h1>About Me</h1>
 
-        <p>If you are curious about the Hebrew bible, wish to gain some insight through reading it in its original language and already have some background studying Hebrew, you are in the right place! The courses consist of 7 classes, 45 min. each, where we read (in Hebrew) and hold in-depth discussions on a segment of 3-4 verses, in addition to other comparisons, with a special focus on biblical Hebrew language. We explore the texts from a primarily academic approach, comparing them to each other and other ancient near eastern sources. We also discuss possible meanings of rare or difficult words in different contexts, explore rabbis' takes on them and much more.</p>
+        <div class="about-container">
+            <!-- Image floated right via CSS -->
+            <img src="../images/Ilan.png" alt="Portrait of Ilan Abutbul" class="about-image">
 
+            <!-- Text Content - Add a wrapper div -->
+            <div class="about-text">
+                <p>Shalom! My name is Ilan Abutbul. Starting in 2011, before I even graduated my studies at Haifa University in northern Israel, I have been teaching Biblical Hebrew and Aramaic in a few online schools, while working in parallel as a high school bible teacher (which is a mandatory subject in the Israeli school system).</p>
 
-        <p>For more information about the offered courses and their curricula, go to "My courses" tab or <a href="../courses/index.html">click here</a>.</p>
-        <!-- Link goes UP ../ then INTO courses/ -->
+                <p>As years went by, I realized teaching adults who are curious and enthusiast about the most consequential Hebrew text to have ever been written, is my call, and shifted fully to online teaching.</p>
 
-       <p> For more information about my teaching approach and general issues, go to Frequently Asked Questions tab or <a href="../faq/index.html">click here</a>.</p>
-       <!-- Link goes UP ../ then INTO faq/ -->
+                <p>Over the years I produced hundreds of study units within a few dozens of courses I am excited to offer you today. These courses are based on a hands-on approach for students of Biblical & modern Hebrew and Aramaic who wish to apply the theoretical and general knowledge they acquire to specific text units, thus deepening their knowledge of these intriguing texts in their original language. I invite you to choose from my available courses about different biblical texts, and join a beautiful community of learners who meet, study and discuss in depth chosen texts. See you in class!</p>
+            </div>
+        </div> <!-- End about-container -->
 
-       <p> For enrollment or contact go to Contact tab or <a href="../contact/index.html">click here</a>.</p>
-       <!-- Link goes UP ../ then INTO contact/ (Assuming contact folder exists) -->
-
-        <!-- This paragraph's content remains in italics -->
-        <p><i>In the background: Torah scrolls and Hanukiah that survived the Nazi extermination of the Jewish residents of the towns around Opatów, Świętokrzyskie county, Poland. The items are presented in the vicinity of a local church.</i></p>
-        <!-- Add more content here as needed -->
     </main>
 
     <footer class="site-footer">
         <p>© 2025 Ilan Abutbul. All rights reserved.</p>
-        <!-- Add footer links or info if needed -->
     </footer>
-
-    <!-- Link to JS file within this MainPage folder -->
     <script src="script.js"></script>
+    <!-- Ensure script link exists if needed for nav highlighting etc. -->
+    <!-- <script src="script.js"></script> -->
 
 </body>
 </html>
